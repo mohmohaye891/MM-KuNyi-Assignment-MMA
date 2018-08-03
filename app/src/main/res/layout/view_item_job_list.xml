@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_medium_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_full">
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_jotitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="House Keeping"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_3x"/>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_jotitle"
+            android:text="$2000"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textColor="@color/primary_text"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_job_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_jotitle"
+            android:textColor="@color/primary_text"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+
+       <RelativeLayout
+           android:id="@+id/rl_job_statistic"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/tv_job_desc"
+           android:layout_marginLeft="@dimen/margin_medium_2"
+           android:layout_marginRight="@dimen/margin_medium_2"
+           android:layout_marginTop="@dimen/margin_medium_2">
+
+           <TextView
+               android:id="@+id/tv_time"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/primary_text"
+               android:drawableLeft="@drawable/ic_access_time_black_24dp"
+               android:drawablePadding="@dimen/margin_medium"
+               android:text="300 hour"/>
+
+           <TextView
+               android:id="@+id/tv_township"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tv_time"
+               android:textColor="@color/primary_text"
+               android:drawableLeft="@drawable/ic_location_on_black_24dp"
+               android:drawablePadding="@dimen/margin_medium"
+               android:layout_marginLeft="@dimen/margin_medium"
+               android:text="Hledan"/>
+
+           <TextView
+               android:id="@+id/tv_job_apply"
+               android:layout_width="wrap_content"
+               android:textColor="#DC3B33"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tv_township"
+               android:layout_marginLeft="@dimen/margin_medium"
+               android:text="2 persons apply"/>
+
+       </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:textColor="@color/primary_text"
+            android:layout_below="@id/rl_job_statistic"
+            android:text="Apply"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_job_statistic"
+            android:layout_toRightOf="@+id/btn_apply"
+            android:textColor="@color/primary_text"
+            android:layout_marginLeft="@dimen/margin_xxlarge"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:text="Save"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

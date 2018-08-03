@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/jobs_details_appbar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/googlemap"/>
+                
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/tv_jobtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:textSize="@dimen/text_regular_2x"
+                android:text="Job Title"/>
+
+            <TextView
+                android:id="@+id/tv_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_xlarge"
+                android:layout_toRightOf="@+id/tv_jobtitle"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_jobtitle_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_toRightOf="@+id/tv_separator"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_jobtitle"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="Location"/>
+
+            <TextView
+                android:id="@+id/tv_separator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="38dp"
+                android:layout_below="@+id/tv_jobtitle"
+                android:layout_toRightOf="@+id/tv_location"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_township_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_below="@+id/tv_jobtitle"
+                android:layout_toRightOf="@+id/tv_separator"/>
+
+            <TextView
+                android:id="@+id/tv_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_location"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="Payment"/>
+
+            <TextView
+                android:id="@+id/tv_separator3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="38dp"
+                android:layout_below="@+id/tv_location"
+                android:layout_toRightOf="@+id/tv_location"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_payment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_below="@+id/tv_location"
+                android:layout_toRightOf="@+id/tv_separator"/>
+
+            <TextView
+                android:id="@+id/tv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_payment"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="Period"/>
+
+            <TextView
+                android:id="@+id/tv_separator4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="38dp"
+                android:layout_below="@+id/tv_payment"
+                android:layout_toRightOf="@+id/tv_location"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_period_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_below="@+id/tv_payment"
+                android:layout_toRightOf="@+id/tv_separator"/>
+
+            <TextView
+                android:id="@+id/tv_vacancy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_period"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="Vacancy"/>
+
+            <TextView
+                android:id="@+id/tv_separator5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="38dp"
+                android:layout_below="@+id/tv_period"
+                android:layout_toRightOf="@+id/tv_location"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_vacancy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_below="@+id/tv_period"
+                android:layout_toRightOf="@+id/tv_separator"/>
+
+            <TextView
+                android:id="@+id/tv_job_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_below="@+id/tv_vacancy"
+                android:text="Job Description"/>
+
+            <TextView
+                android:id="@+id/tv_desc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_job_desc"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:text="aaa"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>

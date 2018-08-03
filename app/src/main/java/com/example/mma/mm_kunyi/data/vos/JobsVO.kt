@@ -41,7 +41,7 @@ open class JobsVO(applicant: List<ApplicantVO> = ArrayList(),
     val email: String = email
 
     @SerializedName("fullDesc")
-    val fullDesc: String = fullDesc
+    var fullDesc: String = fullDesc
 
     @SerializedName("genderForJob")
     val genderForJob: String = genderForJob

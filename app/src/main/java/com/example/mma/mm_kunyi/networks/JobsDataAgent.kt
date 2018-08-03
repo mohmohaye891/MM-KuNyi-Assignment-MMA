@@ -45,7 +45,7 @@ class JobsDataAgent {
         mJobsApi = retrofit.create(JobsApi::class.java)
     }
 
-    fun loadJobs(accessToken: String, page: Int) {
+    fun loadJobs(accessToken: String) {
         val jobsResponseCall = mJobsApi.loadMMJobs(accessToken)
         jobsResponseCall.enqueue(object  : Callback<GetJobsResponse> {
             override fun onFailure(call: Call<GetJobsResponse>?, t: Throwable?) {
